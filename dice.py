@@ -1,8 +1,13 @@
 import random
+import statistics         #平均値を求める関数をインポート
 
+l = []                    #平均値を求めるためのリストを定義
 for i in range(10):
     x = random.randint(1,6)
     print(str(i+1)+"回目："+str(x))
+    l.append(x)           #リストに値を追加する
+else:
+    print("平均値："+ str(statistics.mean(l))) #平均値を表示する
 
 # 期待される出力結果例
 """
